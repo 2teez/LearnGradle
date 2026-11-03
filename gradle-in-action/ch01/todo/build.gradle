@@ -1,1 +1,20 @@
-apply plugin: 'java'
+// using a sinle line below to
+// generate a configuration for a java project
+// apply plugin: 'java'
+
+// improve on the gradle apply plugin : 'java', above
+plugins {
+    id 'java'
+}
+
+version = '0.1'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.practice.todo.ToDoApp'
+    }
+}
